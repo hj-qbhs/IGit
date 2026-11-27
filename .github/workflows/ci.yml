@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches: [main, feature/ci-setup]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify repository files
+        run: |
+          test -f README.md
+          echo "Repository structure verified."
