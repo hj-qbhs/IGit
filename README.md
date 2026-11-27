@@ -1,0 +1,3 @@
+# IGit
+
+Repository initialized.
